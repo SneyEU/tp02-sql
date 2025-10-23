@@ -1,0 +1,26 @@
+CREATE TABLE fournisseur (
+    id INT(11) PRIMARY KEY,
+    NOM VARCHAR(25)
+);
+CREATE TABLE article (
+    id INT(11) PRIMARY KEY,
+    REF VARCHAR(13),
+    DESIGNATION VARCHAR(255),
+    PRIX DECIMAL(7,2),
+    ID_FOU INT(11)
+);
+
+CREATE TABLE bon (
+    id INT(11),
+    NUMERO INT(11),
+    DATE_CMDE DATETIME,
+    DELAI INT(11),
+    ID_FOU INT(11)
+);
+CREATE TABLE compo (
+    id INT(11),
+    ID_ART INT (11),
+    ID_BON INT (11),
+    QTE INT(11)
+);
+
